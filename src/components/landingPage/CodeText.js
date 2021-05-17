@@ -8,7 +8,7 @@ const CodeText = () => {
   const [text, setText] = useState("");
   const [deltaT, setDeltaT] = useState(0);
   const [index, setIndex] = useState(0);
-  const [textSize, setTextSize] = useState(0.35);
+  const [textSize, setTextSize] = useState(0.25);
   const [textWidth, setTextWidth] = useState(10);
 
   useFrame((state, delta) => {
@@ -25,13 +25,13 @@ const CodeText = () => {
     const currentWidth = window.innerWidth;
     const tSize = currentWidth / 3000;
     const tWidth = currentWidth / 100;
-    if (tSize >= 0.35) {
-      setTextSize(0.35);
+    if (tSize >= 0.25) {
+      setTextSize(0.25);
     } else {
       setTextSize(tSize);
     }
-    if (tWidth >= 10) {
-      setTextWidth(10);
+    if (tWidth >= 7.5) {
+      setTextWidth(7.5);
     } else {
       setTextWidth(tWidth);
     }
@@ -54,7 +54,7 @@ const CodeText = () => {
         fontSize={textSize}
         maxWidth={textWidth}
         fillOpacity={1}
-        position={[0, -3.75, 0]}
+        position={[0.1, -3.75, 0]}
         rotation={new THREE.Euler(-45, 0, 0)}
         textAlign="left"
       >
