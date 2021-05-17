@@ -26,7 +26,7 @@ const LandingPage = () => {
           <CodeText />
           {(() => {
             const code = [];
-            for (let i = -20; i <= 20; i += 1) {
+            for (let i = -20; i <= 20; i += 0.9) {
               code.push(<BinaryText x={i} />);
             }
             return code;
