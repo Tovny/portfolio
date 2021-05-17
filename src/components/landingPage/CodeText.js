@@ -30,8 +30,14 @@ const CodeText = () => {
     } else {
       setTextSize(tSize);
     }
-    if (tWidth >= 7.5) {
-      setTextWidth(7.5);
+    if (tWidth >= 4.75) {
+      if (currentWidth < window.innerHeight) {
+        setTextWidth(4.75);
+      } else if (tWidth >= 7.5) {
+        setTextWidth(7.5);
+      } else {
+        setTextWidth(tWidth);
+      }
     } else {
       setTextWidth(tWidth);
     }
@@ -48,13 +54,13 @@ const CodeText = () => {
   return (
     <Suspense fallback={null}>
       <Text
-        color="rgb(10, 10, 10)" // default
-        anchorX="center" // default
-        anchorY="bottom" // default
+        color="rgb(10, 10, 10)"
+        anchorX="center"
+        anchorY="bottom"
         fontSize={textSize}
         maxWidth={textWidth}
         fillOpacity={1}
-        position={[0.1, -3.75, 0]}
+        position={[0.2, -3.75, 0]}
         rotation={new THREE.Euler(-45, 0, 0)}
         textAlign="left"
       >
