@@ -16,7 +16,7 @@ const BinaryText = ({ x }) => {
       setText(text + `\n${binaryText[Math.floor(Math.random() * 9)]}`);
       setIndex(index + 1);
     }
-    if (index >= 40 + Math.floor(Math.random() * 15)) {
+    if (index >= 25 + Math.floor(Math.random() * 15)) {
       setIndex(0);
       setText("");
     }
