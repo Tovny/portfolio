@@ -35,7 +35,7 @@ const BinaryText = ({ x }) => {
         color="green"
         anchorX="left"
         anchorY="top"
-        fontSize={1}
+        fontSize={0.65}
         fillOpacity={createOpacity()}
         position={[x, 31, -35]}
         textAlign={"left"}
