@@ -23,10 +23,9 @@ const BinaryText = ({ x }) => {
   });
 
   const createOpacity = () => {
-    let opacity = Math.abs(x) / 100;
-    if (Math.abs(opacity) > 10) opacity /= 10;
+    let opacity = Math.abs(x) / 40;
 
-    return 0.25 - opacity;
+    return 0.5 - opacity;
   };
 
   return (
