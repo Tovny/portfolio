@@ -10,7 +10,7 @@ import "./LandingPage.scss";
 const LandingPage = () => {
   useEffect(() => {
     gsap.from(".landingPage h1", { y: 25, opacity: 0, duration: 1 });
-    gsap.from(".landingPage h3", { y: -25, opacity: 0, duration: 1 });
+    gsap.from(".landingPage h2", { y: -25, opacity: 0, duration: 1 });
     gsap.from(".landingPage hr", { opacity: 0, duration: 2 });
     gsap.from(".landingPage button", {
       y: 25,
@@ -34,7 +34,7 @@ const LandingPage = () => {
         </Suspense>
       </Canvas>
       <div className="landingText">
-        <h3>Hi, I'm Anton Drofenik</h3>
+        <h2>Hi, I'm Anton Drofenik</h2>
         <hr />
         <h1>
           I'm a <span>fullstack developer</span>
