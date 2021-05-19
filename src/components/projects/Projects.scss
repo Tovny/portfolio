@@ -1,0 +1,39 @@
+.projects {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  .project {
+    display: grid;
+  }
+
+  .sitePreviews {
+    position: relative;
+  }
+
+  .desktopSite {
+    box-sizing: content-box;
+    position: relative;
+    width: 350px;
+    top: -225px;
+    left: 25px;
+    padding-top: 56.25%;
+    background: red;
+    margin: 5px;
+    border-radius: 7.5px;
+  }
+
+  .mobileSite {
+    box-sizing: content-box;
+    position: relative;
+    width: 140px;
+    top: 50px;
+    padding-top: 66.25%;
+    background: blue;
+    margin: 5px;
+    border-radius: 15px;
+    z-index: 5;
+  }
+}
