@@ -31,7 +31,7 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="landingPage" ref={landingPage}>
+    <section className="landingPage" ref={landingPage}>
       <Canvas>
         <Suspense fallback={null}>
           <CodeText />
@@ -68,7 +68,7 @@ const LandingPage = () => {
           </span>
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
