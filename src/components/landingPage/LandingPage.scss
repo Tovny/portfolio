@@ -1,11 +1,8 @@
 .landingPage {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
-  background-color: rgb(5, 5, 5);
-  position: absolute;
-  left: 0;
-  top: 0;
+  background-color: var(--backgroundColor);
   z-index: -1;
 }
 
@@ -21,6 +18,24 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
+  h1::after,
+  h2::after,
+  button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--backgroundColor);
+    transform: scaleY(var(--Y));
+    transform-origin: 100% 100%;
+  }
+
+  h2::after {
+    transform-origin: 100% 0%;
+  }
+
   span {
     text-transform: uppercase;
     color: red;
@@ -28,10 +43,36 @@
 
   hr {
     margin: 0.5rem;
-    width: 135%;
+    width: calc(100% + 125px);
   }
 
   button {
-    margin-top: 2rem;
+    margin-top: 5rem;
+
+    span {
+      margin-left: 1rem;
+
+      svg {
+        color: white;
+        height: 1.25rem;
+        width: 1.25rem;
+        -webkit-transition: all 175ms ease-in;
+        -o-transition: all 175ms ease-in;
+        transition: all 175ms ease-in;
+      }
+
+      .arrowDown {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        color: red;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    button {
+      margin-top: 3.5rem;
+    }
   }
 }
