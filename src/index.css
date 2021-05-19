@@ -1,3 +1,8 @@
+:root {
+  --Y: 1;
+  --backgroundColor: rgb(5, 15, 5);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,17 +19,23 @@ body {
 }
 
 h1 {
-  font-size: clamp(1rem, 2vw, 2.5rem);
+  font-size: clamp(1.25rem, 2vw, 2.5rem);
 }
 
 h2 {
-  font-size: clamp(0.75rem, 1.5vw, 1.75rem);
+  font-size: clamp(0.85rem, 1.35vw, 1.75rem);
 }
 
 button {
-  background-color: transparent;
+  display: flex;
+  align-items: center;
+  background: var(--backgroundColor);
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: clamp(0.7rem, 1vw, 0.9rem);
+  font-weight: bold;
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
   border: 2px solid white;
+  cursor: pointer;
 }
