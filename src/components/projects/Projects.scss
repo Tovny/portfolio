@@ -2,38 +2,38 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: center;
   min-height: 100vh;
 
   .project {
-    display: grid;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
   }
 
-  .sitePreviews {
-    position: relative;
+  .projectDesc {
+    margin: 0 2rem;
   }
 
-  .desktopSite {
-    box-sizing: content-box;
-    position: relative;
-    width: 350px;
-    top: -225px;
-    left: 25px;
-    padding-top: 56.25%;
-    background: red;
-    margin: 5px;
-    border-radius: 7.5px;
+  p {
+    max-width: 70ch;
+    margin: 0.5rem 0;
+    line-height: 1.75rem;
   }
 
-  .mobileSite {
-    box-sizing: content-box;
-    position: relative;
-    width: 140px;
-    top: 50px;
-    padding-top: 66.25%;
-    background: blue;
-    margin: 5px;
-    border-radius: 15px;
-    z-index: 5;
+  .projectLinks {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+  }
+
+  svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0 2rem;
+  }
+
+  img {
+    height: auto;
+    max-width: 750px;
   }
 }
