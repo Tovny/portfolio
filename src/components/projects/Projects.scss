@@ -3,37 +3,137 @@
   flex-flow: column;
   align-items: center;
   min-height: 100vh;
+  overflow-x: hidden;
 
   .project {
-    display: flex;
-    flex-flow: row;
+    display: grid;
+    grid-template-columns: auto auto;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .right {
+    background-color: #f9f9f9;
+
+    .projectDesc {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    .sitePreviews {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
   }
 
   .projectDesc {
     margin: 0 2rem;
   }
 
+  h2 {
+    margin-bottom: 1rem;
+  }
+
   p {
     max-width: 70ch;
     margin: 0.5rem 0;
-    line-height: 1.75rem;
+    line-height: 1.6rem;
   }
 
   .projectLinks {
     display: flex;
     flex-flow: row;
     align-items: center;
+    margin-top: 1rem;
+
+    a:nth-child(2) {
+      margin: 0 2rem;
+    }
   }
 
   svg {
     height: 1.5rem;
     width: 1.5rem;
-    margin: 0 2rem;
   }
 
   img {
     height: auto;
     max-width: 750px;
   }
+
+  footer {
+    max-width: 100ch;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1rem;
+    margin: 0.5rem 0;
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+  hr {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .projects {
+    .project,
+    .right {
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto;
+      padding-bottom: 1rem;
+
+      .projectDesc {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+      }
+
+      .sitePreviews {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+      }
+    }
+
+    .projectDesc {
+      text-align: left;
+
+      p {
+        max-width: none;
+      }
+    }
+
+    .right {
+      .projectDesc {
+        text-align: right;
+      }
+
+      .projectLinks {
+        a:nth-child(2) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    img {
+      width: 100vw;
+    }
+
+    footer {
+      text-align: justify;
+      font-size: 0.65rem;
+      margin: 0.5rem 1rem;
+    }
+
+    hr {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
 }
