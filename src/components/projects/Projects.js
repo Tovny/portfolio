@@ -50,6 +50,13 @@ const Projects = () => {
         href="https://serene-everglades-51285.herokuapp.com/"
         github="https://github.com/Tovny/fullstack-football-tracker"
       />
+      <footer>
+        <hr />
+        <span> Important note</span>: Projects are hosted on the Heroku free
+        tier, where servers are put to sleep after half an hour of inactivity.
+        For that reason the initial webpage load may require more time, and is
+        not indicative of actual loading performance.
+      </footer>
     </section>
   );
 };
