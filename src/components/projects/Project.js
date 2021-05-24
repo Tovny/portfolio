@@ -21,24 +21,26 @@ const Project = ({
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const tl = gsap.timeline({
-      scrollTrigger: { trigger: projectDiv.current, start: "center bottom" },
-    });
-
-    tl.from(projectPreviewImg.current, {
+    gsap.from(projectPreviewImg.current, {
+      scrollTrigger: {
+        trigger: projectPreviewImg.current,
+        start: "center bottom",
+      },
       opacity: 0,
       x: imgPos === "left" ? -100 : 100,
       duration: 1.5,
-    }).from(
-      projectDescDiv.current.children,
-      {
-        opacity: 0,
-        x: imgPos === "left" ? 100 : -100,
-        duration: 0.75,
-        stagger: 0.25,
+    });
+
+    gsap.from(projectDescDiv.current.children, {
+      scrollTrigger: {
+        trigger: projectDescDiv.current,
+        start: "center bottom",
       },
-      "-= 1"
-    );
+      opacity: 0,
+      x: imgPos === "left" ? 100 : -100,
+      duration: 0.75,
+      stagger: 0.25,
+    });
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
