@@ -1,6 +1,7 @@
 :root {
   --Y: 1;
   --backgroundColor: rgb(5, 15, 5);
+  --textViolet: rgb(130, 0, 216);
 }
 
 * {
@@ -24,6 +25,32 @@ h1 {
 
 h2 {
   font-size: clamp(0.85rem, 1.35vw, 1.75rem);
+}
+
+h3 {
+  font-size: clamp(0.8rem, 1.15vw, 1.25rem);
+  font-weight: 500;
+}
+
+h4 {
+  font-size: clamp(0.7rem, 1vw, 1rem);
+  font-weight: 500;
+}
+
+p {
+  font-size: clamp(0.8rem, 1.1vw, 1rem);
+}
+
+a {
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  transition: color 200ms ease-in;
+}
+
+a:hover {
+  color: var(--textViolet);
 }
 
 button {
