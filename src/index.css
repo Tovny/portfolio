@@ -1,6 +1,7 @@
 :root {
   --Y: 1;
   --backgroundColor: rgb(5, 15, 5);
+  --paperBackground: #f9f9f9;
   --textViolet: rgb(130, 0, 216);
 }
 
@@ -17,6 +18,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: rgb(45, 45, 45);
 }
 
 h1 {
