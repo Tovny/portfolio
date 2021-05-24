@@ -62,7 +62,7 @@ const LandingPage = () => {
             })
           }
         >
-          Learn More
+          View my work
           <span>
             <ImArrowRight2 className={arrowClass} />
           </span>
