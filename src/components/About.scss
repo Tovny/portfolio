@@ -4,12 +4,13 @@
   flex-flow: column;
   background-color: var(--paperBackground);
   padding: 1rem 1rem;
+  padding-bottom: 0;
 
   .aboutMe {
     display: flex;
     align-items: center;
     flex-flow: column;
-    max-width: 75ch;
+    max-width: 70ch;
     text-align: justify;
   }
 
