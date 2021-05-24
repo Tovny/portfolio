@@ -39,7 +39,7 @@ const About = () => {
     <section className="about">
       <h2 ref={aboutH2}>Who am I?</h2>
       <div className="aboutMe" ref={aboutDiv}>
-        <h4>Anton Drofenik, 28; Maribor, Slovenia</h4>
+        <h4>Anton Drofenik, 28 years old, living in Maribor, Slovenia</h4>
         <div className="photo" ref={aboutImg}></div>
         <p>
           The idea that a person can change the world with a few lines of code
