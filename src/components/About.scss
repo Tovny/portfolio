@@ -1,0 +1,42 @@
+.about {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  background-color: var(--paperBackground);
+  padding: 1rem 1rem;
+
+  .aboutMe {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    max-width: 75ch;
+    text-align: justify;
+  }
+
+  p {
+    line-height: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  .photo {
+    height: 275px;
+    width: 275px;
+    border-radius: 25%;
+    border: 5x solid white;
+    margin: 1rem;
+    overflow: hidden;
+    background: url("../assets/photo.jpg");
+    background-size: cover;
+    background-position: center;
+    justify-self: center;
+  }
+
+  a {
+    display: inline;
+    font-weight: bold;
+  }
+}
