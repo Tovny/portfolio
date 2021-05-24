@@ -20,9 +20,9 @@ const Projects = () => {
           </p>,
           <p key="3">
             A two-way interactive connection by the back and frontend is
-            established using the websockets protocol. On the NodeJS backend the
-            connection is handled by the ws library, and on the React frontend
-            by the RxJS library.
+            established using the websockets protocol. On the Node.js backend
+            the connection is handled by the ws library, and on the React
+            frontend by the RxJS library.
           </p>,
         ]}
         href="https://chat-app-tovny.herokuapp.com/"
