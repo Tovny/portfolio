@@ -48,8 +48,8 @@ const About = (props, ref) => {
         <div className="photo" ref={aboutImg}></div>
         <p>
           The idea that a person can change the world with a few lines of code
-          has always appealed to me. That is why I decided to learn programming
-          over three years ago now and haven't looked back since.
+          has always resonated with me. That is why I decided to learn
+          programming over three years ago and haven't looked back since.
         </p>
         <p>
           I learned to program using the Scheme dialect of LISP, which gave me a
@@ -59,8 +59,13 @@ const About = (props, ref) => {
           development and learn new technologies.
         </p>
         <p>
-          I use React for my frontend needs and Node.js for the backend. You can
-          view the code for my projects on my {` `}
+          I use React for my frontend needs and Node.js for the backend. I also
+          have a limited experience with Angular and PHP.
+        </p>
+        <p>
+          I strive to make my websites fast, responsive and user friendly, with
+          code that is clean and easy to understand. The code for my projects is
+          available on my {` `}
           <a
             href="https://github.com/Tovny"
             target="_blank"
@@ -70,9 +75,7 @@ const About = (props, ref) => {
             <span data-hover="Github">Github</span>
           </a>
           {` `}
-          profile. I also have a limited experience with Angular and PHP. I
-          strive to make my websites fast, responsive and user friendly, with
-          code that is clean and easy to understand.
+          profile.{" "}
         </p>
       </div>
     </section>
