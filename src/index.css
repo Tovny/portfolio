@@ -1,6 +1,6 @@
 :root {
   --Y: 1;
-  --backgroundColor: rgb(5, 15, 5);
+  --backgroundColor: rgb(10, 10, 10);
   --paperBackground: #f9f9f9;
   --textViolet: rgb(130, 0, 216);
 }
@@ -23,6 +23,26 @@ body {
 
 h1 {
   font-size: clamp(1.25rem, 2vw, 2.5rem);
+}
+
+.sectionHeading {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.sectionHeading > h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.35rem;
+}
+
+.sectionHeading > hr {
+  width: 50%;
+  height: 0.3rem;
+  background-color: rgb(45, 45, 45);
+  margin-top: 0.5rem;
+  border: none;
 }
 
 h2 {
