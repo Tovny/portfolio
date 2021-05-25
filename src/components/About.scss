@@ -1,8 +1,11 @@
 .about {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-flow: column;
-  background-color: var(--paperBackground);
+  color: rgb(230, 230, 230);
+  background: url("../assets/background.jpg");
+  min-height: 100vh;
   padding: 1rem 1rem;
   padding-bottom: 0;
 
@@ -26,8 +29,7 @@
   .photo {
     height: 275px;
     width: 275px;
-    border-radius: 25%;
-    border: 5x solid white;
+    border-radius: 1.5rem;
     margin: 1rem;
     overflow: hidden;
     background: url("../assets/photo.jpg");
@@ -39,5 +41,11 @@
   a {
     display: inline;
     font-weight: bold;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  a:hover {
+    color: var(--textViolet);
   }
 }
