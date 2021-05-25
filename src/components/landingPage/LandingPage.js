@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState, forwardRef } from "react";
 import { gsap } from "gsap";
 
 import CodeText from "./CodeText";
@@ -9,10 +9,9 @@ import { ImArrowRight2 } from "react-icons/im";
 
 import "./LandingPage.scss";
 
-const LandingPage = () => {
+const LandingPage = (props, ref) => {
   const [arrowClass, setArrowClass] = useState("");
 
-  const landingPage = useRef();
   const landingH1 = useRef();
   const landingH2 = useRef();
   const landingHr = useRef();
@@ -31,7 +30,7 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <section className="landingPage" ref={landingPage}>
+    <section className="landingPage" ref={ref}>
       <Canvas>
         <Suspense fallback={null}>
           <CodeText />
@@ -56,7 +55,7 @@ const LandingPage = () => {
           onMouseLeave={() => setArrowClass("")}
           onClick={() =>
             window.scroll({
-              top: landingPage.current.getBoundingClientRect().height,
+              top: ref.current.getBoundingClientRect().height,
               left: 0,
               behavior: "smooth",
             })
@@ -72,4 +71,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default forwardRef(LandingPage);

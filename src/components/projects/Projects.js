@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import Project from "./Project";
 
 import "./Projects.scss";
@@ -5,9 +6,9 @@ import "./Projects.scss";
 import chatApp from "../../assets/chat-app.png";
 import footballTracker from "../../assets/football-tracker.png";
 
-const Projects = () => {
+const Projects = (props, ref) => {
   return (
-    <section className="projects">
+    <section className="projects" ref={ref}>
       <Project
         preview={chatApp}
         imgPos="right"
@@ -61,4 +62,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default forwardRef(Projects);

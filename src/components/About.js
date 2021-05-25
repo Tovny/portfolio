@@ -1,10 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, forwardRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "./About.scss";
 
-const About = () => {
+const About = (props, ref) => {
   const aboutH2 = useRef();
   const aboutImg = useRef();
   const aboutDiv = useRef();
@@ -36,7 +36,7 @@ const About = () => {
   }, []);
 
   return (
-    <section className="about">
+    <section className="about" ref={ref}>
       <h2 ref={aboutH2}>Who am I?</h2>
       <div className="aboutMe" ref={aboutDiv}>
         <h4>Anton Drofenik, 28 years old, living in Maribor, Slovenia</h4>
@@ -73,4 +73,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default forwardRef(About);
