@@ -58,6 +58,7 @@ a:hover {
 button {
   display: flex;
   align-items: center;
+  justify-content: center;
   background: var(--backgroundColor);
   color: white;
   text-transform: uppercase;
