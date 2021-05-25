@@ -1,5 +1,8 @@
-import { forwardRef } from "react";
+import { forwardRef, useEffect, useRef } from "react";
 import Project from "./Project";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "./Projects.scss";
 
@@ -7,8 +10,31 @@ import chatApp from "../../assets/chat-app.png";
 import footballTracker from "../../assets/football-tracker.png";
 
 const Projects = (props, ref) => {
+  const sectionHeadingDiv = useRef();
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(sectionHeadingDiv.current.children, {
+      scrollTrigger: {
+        trigger: sectionHeadingDiv.current,
+        start: "center bottom",
+      },
+      scaleX: 0,
+      duration: 2,
+      stagger: 0.35,
+      ease: `elastic.out(1, .45)`,
+    });
+  }, []);
+
   return (
     <section className="projects" ref={ref}>
+      <div className="sectionHeading" ref={sectionHeadingDiv}>
+        <h1 className="flipAnimate">
+          <span data-hover="Projects">Projects</span>
+        </h1>
+        <hr />
+      </div>
       <Project
         preview={chatApp}
         imgPos="right"

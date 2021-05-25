@@ -5,22 +5,22 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./About.scss";
 
 const About = (props, ref) => {
-  const aboutH2 = useRef();
+  const sectionHeadingDiv = useRef();
   const aboutImg = useRef();
   const aboutDiv = useRef();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from(aboutH2.current, {
+    gsap.from(sectionHeadingDiv.current.children, {
       scrollTrigger: {
-        trigger: aboutH2.current,
-        start: "bottom bottom",
+        trigger: sectionHeadingDiv.current,
+        start: "center bottom",
       },
-      opacity: 0,
-      y: -25,
-      duration: 1,
-      stagger: 0.3,
+      scaleX: 0,
+      duration: 2,
+      stagger: 0.35,
+      ease: `elastic.out(1, .45)`,
     });
 
     gsap.from(aboutDiv.current.children, {
@@ -37,7 +37,12 @@ const About = (props, ref) => {
 
   return (
     <section className="about" ref={ref}>
-      <h2 ref={aboutH2}>Who am I?</h2>
+      <div className="sectionHeading" ref={sectionHeadingDiv}>
+        <h1 className="flipAnimate">
+          <span data-hover="About me">About me</span>
+        </h1>
+        <hr />
+      </div>
       <div className="aboutMe" ref={aboutDiv}>
         <h4>Anton Drofenik, 28 years old, living in Maribor, Slovenia</h4>
         <div className="photo" ref={aboutImg}></div>
@@ -60,8 +65,9 @@ const About = (props, ref) => {
             href="https://github.com/Tovny"
             target="_blank"
             rel="noopener noreferrer"
+            className="flipAnimate"
           >
-            {`Github`}
+            <span data-hover="Github">Github</span>
           </a>
           {` `}
           profile. I also have a limited experience with Angular and PHP. I
