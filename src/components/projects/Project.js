@@ -29,6 +29,7 @@ const Project = ({
       opacity: 0,
       x: imgPos === "left" ? -100 : 100,
       duration: 1.5,
+      ease: `elastic.out(1, .7)`,
     });
 
     gsap.from(projectDescDiv.current.children, {
