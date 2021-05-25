@@ -29,7 +29,7 @@ const Project = ({
       opacity: 0,
       x: imgPos === "left" ? -100 : 100,
       duration: 1.5,
-      ease: `elastic.out(1, .7)`,
+      ease: `back.out(2)`,
     });
 
     gsap.from(projectDescDiv.current.children, {
@@ -39,8 +39,9 @@ const Project = ({
       },
       opacity: 0,
       x: imgPos === "left" ? 100 : -100,
-      duration: 0.75,
+      duration: 1,
       stagger: 0.25,
+      ease: `back.out(2)`,
     });
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -73,8 +74,13 @@ const Project = ({
         >
           {imgPos === "left" ? (
             <>
-              <a href={href} target="_blank" rel="noopener noreferrer">
-                <h4>Live Demo</h4>
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flipAnimate"
+              >
+                <h4 data-hover="Live Demo">Live Demo</h4>
               </a>
               <a href={github} target="_blank" rel="noopener noreferrer">
                 <FaGithub />
@@ -85,8 +91,13 @@ const Project = ({
               <a href={github} target="_blank" rel="noopener noreferrer">
                 <FaGithub />
               </a>
-              <a href={href} target="_blank" rel="noopener noreferrer">
-                <h4>Live Demo</h4>
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flipAnimate"
+              >
+                <h4 data-hover="Live Demo">Live Demo</h4>
               </a>
             </>
           )}
