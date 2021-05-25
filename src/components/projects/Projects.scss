@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 0 2rem;
+    padding: 2rem;
   }
 
   .right {
@@ -70,13 +70,13 @@
     line-height: 1rem;
     margin: 0.5rem 0;
 
+    hr {
+      display: none;
+    }
+
     span {
       text-transform: uppercase;
     }
-  }
-
-  hr {
-    display: none;
   }
 }
 
@@ -127,10 +127,10 @@
       text-align: justify;
       font-size: 0.65rem;
       margin: 0.5rem 1rem;
-    }
 
-    hr {
-      display: block;
+      hr {
+        display: block;
+      }
     }
   }
 }
