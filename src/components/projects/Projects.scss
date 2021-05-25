@@ -2,7 +2,6 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  min-height: 100vh;
   overflow-x: hidden;
 
   .project {
@@ -11,6 +10,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding: 0 2rem;
   }
 
   .right {
@@ -28,7 +28,7 @@
   }
 
   .projectDesc {
-    margin: 0 2rem;
+    margin: 0 1rem;
   }
 
   h2 {
