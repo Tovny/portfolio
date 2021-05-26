@@ -29,14 +29,16 @@ const About = (props, ref) => {
         start: "bottom bottom",
       },
       opacity: 0,
-      y: -25,
+      scaleX: 0,
+      scaleY: 0,
       duration: 1,
       stagger: 0.3,
+      ease: `back.out(1.5)`,
     });
   }, []);
 
   return (
-    <section className="about" ref={ref}>
+    <section id="about" ref={ref}>
       <div className="sectionHeading" ref={sectionHeadingDiv}>
         <h1 className="flipAnimate">
           <span data-hover="About me">About me</span>
@@ -60,7 +62,7 @@ const About = (props, ref) => {
         </p>
         <p>
           I use React for my frontend needs and Node.js for the backend. I also
-          have a limited experience with Angular and PHP.
+          have a limited experience with Angular, Typescript and PHP.
         </p>
         <p>
           I strive to make my websites fast, responsive and user friendly, with

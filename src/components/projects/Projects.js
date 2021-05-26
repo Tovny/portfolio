@@ -28,7 +28,7 @@ const Projects = (props, ref) => {
   }, []);
 
   return (
-    <section className="projects" ref={ref}>
+    <section id="projects" ref={ref}>
       <div className="sectionHeading" ref={sectionHeadingDiv}>
         <h1 className="flipAnimate">
           <span data-hover="Projects">Projects</span>

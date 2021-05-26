@@ -30,7 +30,7 @@ const LandingPage = (props, ref) => {
   }, []);
 
   return (
-    <section className="landingPage" ref={ref}>
+    <section id="landing" ref={ref}>
       <Canvas>
         <Suspense fallback={null}>
           <CodeText />
