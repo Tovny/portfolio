@@ -41,15 +41,15 @@ const Projects = (props, ref) => {
         tech="ws, Firebase, RxJS, React"
         title="Chat Website"
         description={[
-          <p key="1">A fullstack realtime chat website. </p>,
+          <p key="1">A fullstack real-time chat website. </p>,
           <p key="2">
             User authentication and chat history are handled by Firebase.
           </p>,
           <p key="3">
             A two-way interactive connection by the back and frontend is
-            established using the websockets protocol. On the Node.js backend
-            the connection is handled by the ws library, and on the React
-            frontend by the RxJS library.
+            established using the websocket protocol. On the Node.js backend the
+            connection is handled by the ws library, and on the React frontend
+            by the RxJS library.
           </p>,
         ]}
         href="https://chat-app-tovny.herokuapp.com/"
@@ -66,12 +66,12 @@ const Projects = (props, ref) => {
           </p>,
           <p key="5">
             The actual results are scraped once a day from the official league
-            sites with scrapers made with Cheerio and Puppeteer.
+            websites with scrapers made with Cheerio and Puppeteer.
           </p>,
           <p key="6">
-            That data is parsed and saved in a MongoDB database, which is
-            connected to the React frontend with a RESTful API created with
-            Express.
+            That data is parsed and stored in a MongoDB database. A RESTful web
+            API made with Express on the Node.js backend is used to communicate
+            data to the React frontend.
           </p>,
         ]}
         href="https://serene-everglades-51285.herokuapp.com/"
