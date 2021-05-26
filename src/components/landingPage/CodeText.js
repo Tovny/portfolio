@@ -54,7 +54,7 @@ const CodeText = () => {
   return (
     <Suspense fallback={null}>
       <Text
-        color="rgb(10, 10, 10)"
+        color="rgb(15, 15, 15)"
         anchorX="center"
         anchorY="bottom"
         fontSize={textSize}
