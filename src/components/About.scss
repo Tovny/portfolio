@@ -11,6 +11,35 @@
   padding-top: 0;
   padding-bottom: 0;
 
+  ul {
+    list-style: none;
+    text-align: center;
+  }
+
+  li {
+    border-bottom: 2px solid rgba(130, 0, 216, 0.35);
+    padding: 0 1rem;
+
+    h4 {
+      margin: 0.5rem 0;
+      letter-spacing: 0.2rem;
+    }
+
+    svg {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    a:hover {
+      color: var(--textViolet);
+    }
+  }
+
+  li:last-child {
+    border-bottom: none;
+    margin-top: 0.5rem;
+  }
+
   hr {
     background-color: rgb(230, 230, 230);
   }
@@ -21,6 +50,7 @@
     flex-flow: column;
     max-width: 70ch;
     text-align: justify;
+    margin-top: 2rem;
   }
 
   p {
@@ -32,13 +62,20 @@
   .photo {
     height: 275px;
     width: 275px;
-    border-radius: 1.5rem;
     margin: 1rem;
+    border-radius: 50%;
     overflow: hidden;
-    background: url("../assets/photo.jpg");
+    background: radial-gradient(
+        circle at center,
+        transparent 35%,
+        #05091228 65%,
+        #050912 70%
+      ),
+      url("../assets/photo.jpg");
     background-size: cover;
     background-position: center;
     justify-self: center;
+    opacity: 0.75;
   }
 
   a {
