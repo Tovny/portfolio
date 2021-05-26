@@ -45,7 +45,7 @@ const About = (props, ref) => {
       },
       opacity: 0,
       scaleX: 0,
-      scaleY: 0,
+      scaleY: (vars) => (vars === 0 ? 1 : 0),
       duration: 1,
       stagger: 0.3,
       ease: `back.out(1.5)`,
