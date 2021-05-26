@@ -1,4 +1,5 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
+import smoothscroll from "smoothscroll-polyfill";
 
 import "./App.scss";
 
@@ -11,6 +12,10 @@ function App() {
   const landingSection = useRef();
   const projectSection = useRef();
   const aboutSection = useRef();
+
+  useEffect(() => {
+    smoothscroll.polyfill();
+  }, []);
   return (
     <div className="App">
       <LandingPage ref={landingSection} />
