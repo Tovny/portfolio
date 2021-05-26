@@ -81,7 +81,7 @@
 }
 
 @media screen and (max-width: 992px) {
-  .projects {
+  #projects {
     .project,
     .right {
       grid-template-columns: 100%;
@@ -133,7 +133,4 @@
       }
     }
   }
-}
-
-@media screen and (max-width: 600px) {
 }
