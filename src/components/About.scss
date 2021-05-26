@@ -17,12 +17,21 @@
   }
 
   li {
-    border-bottom: 2px solid rgba(130, 0, 216, 0.35);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
     padding: 0 1rem;
 
     h4 {
       margin: 0.5rem 0;
       letter-spacing: 0.2rem;
+    }
+
+    hr {
+      width: 25%;
+      height: 0.2rem;
+      background-color: #250542;
+      border: none;
     }
 
     svg {

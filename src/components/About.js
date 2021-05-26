@@ -63,21 +63,27 @@ const About = (props, ref) => {
       <ul ref={infoUl}>
         <li>
           <h4>Anton Drofenik</h4>
+          <hr />
         </li>
         <li>
           <h4>Maribor, Slovenia</h4>
+          <hr />
         </li>
         <li>
           <h4>Three years coding experience</h4>
+          <hr />
         </li>
         <li>
           <h4>Excellent Javascript knowledge (React, Node.js)</h4>
+          <hr />
         </li>
         <li>
           <h4>Limited Typescript knowledge (Angular)</h4>
+          <hr />
         </li>
         <li>
           <h4>Limited PHP knowledge</h4>
+          <hr />
         </li>
         <li>
           <a
@@ -93,15 +99,15 @@ const About = (props, ref) => {
         <div className="photo" ref={aboutImg}></div>
         <p>
           The idea that a person can change the world with a few lines of code
-          has always resonated with me. That is why I decided to learn
-          programming over three years ago and haven't looked back since.
+          has always resonated with me. That is why over three years ago I
+          started learning to code and haven't looked back since.
         </p>
         <p>
-          I learned to program using the Scheme dialect of LISP, which gave me a
-          strong understanding of the core concepts of programming and the
-          ability to quickly learn new languages. Since then I have been
-          learning and using Javascript on a daily basis to master web
-          development and learn new technologies.
+          I learned to program using the Scheme dialect of LISP. The minimalist
+          design of Scheme insured that I have strong understanding of the core
+          concepts of programming and the ability to quickly learn new
+          languages. Since then I have been learning and using Javascript on a
+          daily basis to master web development and learn new technologies.
         </p>
         <p>
           I use React for my frontend needs and Node.js for the backend. I also
@@ -109,8 +115,8 @@ const About = (props, ref) => {
         </p>
         <p>
           I strive to make my websites fast, responsive and user friendly, with
-          code that is clean and easy to understand. The code for my projects is
-          available on my {` `}
+          code that is clean and easy to understand. You can view the code for
+          my projects on my {` `}
           <a
             href="https://github.com/Tovny"
             target="_blank"
