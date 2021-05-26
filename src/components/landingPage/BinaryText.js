@@ -23,7 +23,7 @@ const BinaryText = ({ x }) => {
   });
 
   const createOpacity = () => {
-    let opacity = Math.abs(x) / 40;
+    let opacity = Math.abs(x) / 30;
 
     return 0.5 - opacity;
   };
@@ -36,7 +36,7 @@ const BinaryText = ({ x }) => {
         anchorY="top"
         fontSize={0.65}
         fillOpacity={createOpacity()}
-        position={[x, 31, -35]}
+        position={[x, 32.2, -35]}
         textAlign={"left"}
       >
         {text}
