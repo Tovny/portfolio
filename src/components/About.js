@@ -4,8 +4,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "./About.scss";
 
+import { FaGithub } from "react-icons/fa";
+
 const About = (props, ref) => {
   const sectionHeadingDiv = useRef();
+  const infoUl = useRef();
   const aboutImg = useRef();
   const aboutDiv = useRef();
 
@@ -21,6 +24,18 @@ const About = (props, ref) => {
       duration: 2,
       stagger: 0.35,
       ease: `elastic.out(1, .45)`,
+    });
+
+    gsap.from(infoUl.current.children, {
+      scrollTrigger: {
+        trigger: infoUl.current,
+        start: "center bottom",
+      },
+      scaleX: 0,
+      opacity: 0,
+      duration: 1.25,
+      stagger: 0.25,
+      ease: `back.out(1.25)`,
     });
 
     gsap.from(aboutDiv.current.children, {
@@ -45,8 +60,36 @@ const About = (props, ref) => {
         </h1>
         <hr />
       </div>
+      <ul ref={infoUl}>
+        <li>
+          <h4>Anton Drofenik</h4>
+        </li>
+        <li>
+          <h4>Maribor, Slovenia</h4>
+        </li>
+        <li>
+          <h4>Three years coding experience</h4>
+        </li>
+        <li>
+          <h4>Excellent Javascript knowledge (React, Node.js)</h4>
+        </li>
+        <li>
+          <h4>Limited Typescript knowledge (Angular)</h4>
+        </li>
+        <li>
+          <h4>Limited PHP knowledge</h4>
+        </li>
+        <li>
+          <a
+            href="https://github.com/Tovny"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub />
+          </a>
+        </li>
+      </ul>
       <div className="aboutMe" ref={aboutDiv}>
-        <h4>Anton Drofenik, 28 years old, living in Maribor, Slovenia</h4>
         <div className="photo" ref={aboutImg}></div>
         <p>
           The idea that a person can change the world with a few lines of code
