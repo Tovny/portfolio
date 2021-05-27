@@ -31,7 +31,7 @@ const LandingPage = (props, ref) => {
 
   return (
     <section id="landing" ref={ref}>
-      <Canvas>
+      <Canvas gl={{ antialias: false, pixelRatio: window.devicePixelRatio }}>
         <Suspense fallback={null}>
           <CodeText />
           {(() => {
