@@ -17,7 +17,7 @@ const Navigation = ({ landingSection, projectSection, aboutSection }) => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const activeColor = "rgb(130, 0, 216)";
+    const activeColor = "rgb(125, 25, 192)";
 
     const landing = landingSection.current;
     const project = projectSection.current;
