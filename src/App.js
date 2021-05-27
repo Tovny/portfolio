@@ -13,10 +13,28 @@ function App() {
   const projectSection = useRef();
   const aboutSection = useRef();
 
-  const setVh = () => {
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  const debounce = (func, timeout = 300) => {
+    let timer;
+    return (...args) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        func.apply(this, args);
+      }, timeout);
+    };
   };
+
+  const setVh = debounce(() => {
+    const oldVh = document.documentElement.style.getPropertyValue("--vh");
+    const newVh = window.innerHeight * 0.01;
+
+    document.documentElement.style.setProperty("--vh", `${newVh}px`);
+
+    const scrollAmount = parseFloat(oldVh) * 100 - parseFloat(newVh) * 100;
+
+    if (window.scrollY !== 0) window.scrollBy(0, scrollAmount);
+  });
+
+  setVh();
 
   useEffect(() => {
     smoothscroll.polyfill();
@@ -24,6 +42,8 @@ function App() {
     window.addEventListener("resize", setVh);
 
     return () => window.removeEventListener("resize", setVh);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className="App">
