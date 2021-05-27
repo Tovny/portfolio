@@ -6,8 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "./Projects.scss";
 
-import chatApp from "../../assets/chat-app.png";
-import footballTracker from "../../assets/football-tracker.png";
+import chatApp from "../../assets/chat-app.webp";
+import footballTracker from "../../assets/football-tracker.webp";
 
 const Projects = (props, ref) => {
   const sectionHeadingDiv = useRef();
