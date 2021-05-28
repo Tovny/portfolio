@@ -24,10 +24,10 @@ function App() {
     if (window.scrollY !== 0) window.scrollBy(0, scrollAmount);
   };
 
-  setVh();
-
   useEffect(() => {
     smoothscroll.polyfill();
+
+    setVh();
 
     window.addEventListener("resize", setVh);
 
@@ -35,6 +35,7 @@ function App() {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   return (
     <div className="App">
       <LandingPage ref={landingSection} />
