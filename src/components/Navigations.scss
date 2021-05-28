@@ -29,8 +29,11 @@
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
   }
 
-  button:hover {
-    color: white;
+  @media (hover: hover) {
+    button:hover {
+      color: white;
+      border: 2px solid var(--textViolet);
+    }
   }
 }
 
