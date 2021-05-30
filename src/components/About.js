@@ -100,18 +100,18 @@ const About = (props, ref) => {
         <p>
           The idea that a person can change the world with a few lines of code
           has always resonated with me. That is why over three years ago I
-          started learning to code and haven't looked back since.
+          started learning how to code and haven't looked back since.
         </p>
         <p>
           I learned to program using the Scheme dialect of LISP. The minimalist
           design of Scheme insured that I have strong understanding of the core
-          concepts of programming and the ability to quickly learn new
+          concepts of programming, which enables me to quickly learn new
           languages. Since then I have been learning and using Javascript on a
           daily basis to master web development and learn new technologies.
         </p>
         <p>
           I use React for my frontend needs and Node.js for the backend. I also
-          have a limited experience with Angular, Typescript and PHP.
+          have limited experience with Angular, Typescript and PHP.
         </p>
         <p>
           I strive to make my websites fast, responsive and user friendly, with

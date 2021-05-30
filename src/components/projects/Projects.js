@@ -65,8 +65,9 @@ const Projects = (props, ref) => {
             A fullstack website that tracks football results and news.{" "}
           </p>,
           <p key="5">
-            The actual results are scraped once a day from the official league
-            websites with scrapers made with Cheerio and Puppeteer.
+            The actual football results and news are scraped once a day from the
+            official league websites with web scrapers made with Cheerio and
+            Puppeteer.
           </p>,
           <p key="6">
             That data is parsed and stored in a MongoDB database. A RESTful web
