@@ -7,7 +7,7 @@ import { HiChevronDoubleUp } from "react-icons/hi";
 import { MdWork } from "react-icons/md";
 import { SiAboutDotMe } from "react-icons/si";
 
-import "./Navigations.scss";
+import "./Navigation.scss";
 
 const Navigation = ({ landingSection, projectSection, aboutSection }) => {
   const navUl = useRef();
