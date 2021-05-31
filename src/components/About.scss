@@ -1,7 +1,16 @@
 #about {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
   flex-flow: column;
   color: rgb(230, 230, 230);
   background: url("../assets/background.jpg");
@@ -18,8 +27,15 @@
   }
 
   li {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
     flex-flow: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 0 1rem;
 
@@ -55,8 +71,15 @@
   }
 
   .aboutMe {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
     flex-flow: column;
     max-width: 70ch;
     text-align: justify;
@@ -75,6 +98,14 @@
     margin: 1rem;
     border-radius: 50%;
     overflow: hidden;
+    background: -o-radial-gradient(
+        center,
+        circle,
+        transparent 60%,
+        #05091228 65%,
+        #050912 70%
+      ),
+      url("../assets/photo.webp");
     background: radial-gradient(
         circle at center,
         transparent 60%,
@@ -84,6 +115,7 @@
       url("../assets/photo.webp");
     background-size: cover;
     background-position: center;
+    -ms-grid-column-align: center;
     justify-self: center;
     opacity: 0.75;
   }

@@ -1,13 +1,26 @@
 #projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
   flex-flow: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   overflow-x: hidden;
 
   .project {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: auto auto;
     grid-template-columns: auto auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 100%;
     padding: 2rem;
@@ -17,12 +30,20 @@
     background-color: var(--paperBackground);
 
     .projectDesc {
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 1;
       grid-column: 1 / 2;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
       grid-row: 1 / 2;
     }
 
     .sitePreviews {
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
       grid-column: 2 / 3;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
       grid-row: 1 / 2;
     }
   }
@@ -42,8 +63,15 @@
   }
 
   .projectLinks {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
     flex-flow: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-top: 1rem;
 
@@ -84,17 +112,27 @@
   #projects {
     .project,
     .right {
+      -ms-grid-columns: 100%;
       grid-template-columns: 100%;
+      -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
       padding-bottom: 1rem;
 
       .projectDesc {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
         grid-column: 1 / 4;
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
         grid-row: 2 / 3;
       }
 
       .sitePreviews {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
         grid-column: 1 / 4;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
         grid-row: 1 / 2;
       }
     }
